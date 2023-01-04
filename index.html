@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Kanit&family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Project</title>
+</head>
+
+<body> 
+    <header>
+        <div class="time-section">
+            <div class="clock">
+                <div>
+                    <span id="hour">00</span>
+                    <span class="text">Hours</span>
+                </div>
+                <div>
+                    <span id="minutes">00</span>
+                    <span class="text">Minutes</span>
+                </div>
+                <div>
+                    <span id="seconds">00</span>
+                    <span class="text">Seconds</span>
+                </div>
+                <div>
+                    <span id="am">AM</span>
+                </div>
+            </div>
+        </div>
+    
+        <div class="searched-cities">
+            <button class="searchedBtn">Searched cities</button>
+            <ul class="history loading" >
+    
+            </ul>
+        </div>
+    </header>
+
+    <section >
+        <img class="logo" src="./images/localsearch.png" alt="logo"> 
+        <div class="search">
+            <input type="text" class="search-input" name="search" placeholder="Enter City" />
+            <button class="btn"><img  class="search_icon" src="./images/search-logo.png"></button>
+        </div>
+    </section>
+    
+    <div class="content loading">
+        <div class="weather_section">
+            <h2 class="header">Weather</h2>
+                <div class="weather loading">
+                    <h2 class="city"></h2>
+                    <h2 class="temp"></h2>
+                    <div class="flex">
+                        <div class="description"></div>
+                    </div>
+                    <h3 class="feels_like"></h3>
+                    <div class="temp_min"> </div>
+                    <div class="temp_max"> </div>
+        
+                    <br>
+                    <div class="humidity"></div>
+                    <div class="wind"></div>
+                </div>
+            
+        </div>
+
+        <div class="photo_section">
+            <h2 class="header">Photography</h2>
+            <div class="pictures">
+                <div class="img1" ></div>
+                <div class="img2"></div>
+                <div class="img3"></div>
+                <div class="img4"></div>
+             </div>
+        </div>
+    
+        <div class="event_section">
+            <div class="header-category">
+                <h2 class="header">Events</h2>
+                <div class="categories">
+                    <label for="categories"></label>
+                    <select name="category" id="category">
+                      <option value="Theater">Theater</option>
+                      <option value="Comedy" selected>Comedy</option>
+                      <option value="Classical" >Classical</option>
+                      <option value="Concert">Concert</option>
+                      <option value="Nfl">Football</option>
+                      <option value="Nhl">Hockey</option>
+                    </select>
+                </div>
+            </div>
+            <div class="events">
+
+            </div>
+
+        </div>
+    </div>
+    <script src="keys.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
