@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Kanit&family=Open+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <title>Project</title>
+    <title>Local Search</title>
 </head>
 
 <body> 
@@ -42,13 +42,13 @@
         </div>
     </header>
 
-    <section >
+    <div id="search-section" >
         <img class="logo" src="./images/localsearch.png" alt="logo"> 
         <div class="search">
             <input type="text" class="search-input" name="search" placeholder="Enter City" />
             <button class="btn"><img  class="search_icon" src="./images/search-logo.png"></button>
         </div>
-    </section>
+    </div>
     
     <div class="content loading">
         <div class="weather_section">
@@ -66,12 +66,11 @@
                     <br>
                     <div class="humidity"></div>
                     <div class="wind"></div>
-                </div>
-            
+                </div>   
         </div>
 
         <div class="photo_section">
-            <h2 class="header">Photography</h2>
+            <h2 class="header photo-header">Photography</h2>
             <div class="pictures">
                 <div class="img1" ></div>
                 <div class="img2"></div>
@@ -82,7 +81,7 @@
     
         <div class="event_section">
             <div class="header-category">
-                <h2 class="header">Events</h2>
+                <h2 class="header events-header">Events</h2>
                 <div class="categories">
                     <label for="categories"></label>
                     <select name="category" id="category">
