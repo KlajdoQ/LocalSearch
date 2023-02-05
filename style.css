@@ -12,10 +12,9 @@ body {
     position:relative;
     height:850px;
 }
-
-                                               /* SEARCH FORM */
-
-
+/******************************
+ *     SEARCH FORM            *
+ * ***************************/
 .search {
     display:flex;
     align-items: center;
@@ -58,9 +57,9 @@ body {
     border:none;
     border-radius: 15px;;
 }
-
-
-                                           /*=== CONTENT === */
+/******************************
+ *     MAIN CONTENT           *
+ * ***************************/
 .content {
     width:100%;
     height:580px;
@@ -74,7 +73,9 @@ body {
 .content.loading {
     visibility: hidden;
 }
-                                          /* === EVENTS === */
+/******************************
+ *     EVENTS                 *
+ * ***************************/
 .event_section {
     height:550px;
     width:550px;
@@ -140,7 +141,6 @@ body {
     justify-content: center;
     align-items: center;
 }
-
 .date {
     width :150px;
     height :20px;
@@ -162,9 +162,9 @@ body {
 .purchaseBtn:hover {
    opacity:0.7;
 }
-
-
-                                           /*=== PHOTOS ===*/
+/******************************
+ *     PHOTOS                 *
+ * ***************************/
 .photo_section {
     height:550px;
     width:600px;
@@ -198,13 +198,13 @@ body {
     width:350px;
     height:250px;
 }
-
-                                              /*===   WEATHER   === */
+/******************************
+ *     WEATHER                *
+ * ***************************/
 .weather_section {
     height:550px;
     width:320px;
 }
-
 .weather {
     background-color: rgb(9, 57, 97);
     color:white;
@@ -225,9 +225,9 @@ body {
     font-size: 20px;
     font-weight: bold;
 }
-
-
-                                             /*REAL TIME CLOCK */
+/******************************
+ *     LIVE CLOCK             *
+ * ***************************/
 .time-section {
     position:absolute;
     left:0;
@@ -238,12 +238,10 @@ body {
     display: flex;
     position:left;
 }
-
 .clock div {
     margin: 5px;
     position: relative;
 }
-
 .clock span {
     width: 50px;
     height: 30px;
@@ -256,7 +254,6 @@ body {
     font-size: 25px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
-
 .clock .text {
     height: 18px;
     font-size: 7px;
@@ -265,7 +262,6 @@ body {
     background: darkblue;
     opacity: 0.8;
 }
-
 .clock #am {
     bottom: 0;
     position: absolute;
@@ -274,9 +270,9 @@ body {
     font-size: 12px;
     background: green;
 }
-
-
-                                          /* =====SEARCHED CITIES=====*/
+/******************************
+ *     SEARCHED CITIES        *
+ * ***************************/
 .searched-cities {
     position: absolute;
     top: 20px;
