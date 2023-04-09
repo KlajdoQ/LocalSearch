@@ -316,7 +316,10 @@ body {
 .history.loading{
     visibility: hidden;
 }
-@media  (max-width:800px) {
+@media only screen and (max-width: 600px) and (min-width: 400px)  {
+   #search-section > .logo {
+        display:none;
+    }
     #search-section {
         margin-top:300px;
         margin-left:50px;
@@ -330,12 +333,14 @@ body {
     .content {
         display:flex ;
         flex-direction: column;
+        align-items: center;
         margin-left:50px;
         height:70px;
     }
     body {
         display:flex;
         flex-direction: column;
+        align-items: center;
     }
     .photo-header {
         margin-top:50px;

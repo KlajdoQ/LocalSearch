@@ -18,11 +18,11 @@ function updateClock() {
     let m = new Date().getMinutes()
     let s = new Date().getSeconds()
     let am = "AM"
-    
+    console.log()
       // Convert the hours to 12-hour format
     if (h > 12) {
         h = h - 12
-        am = "PM"
+        amEl.textContent = "PM"
     };
     
       // Add leading zeros to the hours, minutes and seconds
@@ -106,15 +106,15 @@ let weather = {
      // Display weather data on the page
    displayWeather: function (data) {
        const { name } = data
-       const { icon, description } = data.weather[0]
+       const { description } = data.weather[0]
        const { temp, humidity, feels_like, temp_min, temp_max } = data.main
        const { speed } = data.wind
 
           // Update weather information on the page
        document.querySelector('.temp').textContent = temp + " °F"
        document.querySelector('.feels_like').textContent = "Feels like: " + feels_like
-       document.querySelector('.temp_min').textContent = "High: " +temp_min + " °F"
-       document.querySelector('.temp_max').textContent = "Low: " +temp_max + " °F"
+       document.querySelector('.temp_min').textContent = "Low: " +temp_min + " °F"
+       document.querySelector('.temp_max').textContent = "High: " +temp_max + " °F"
        document.querySelector('.description').textContent = description
        document.querySelector('.humidity').textContent = "Humidity: " + humidity + "%"
        document.querySelector('.wind').textContent = "Wind speed: " + speed + " mph"
@@ -137,9 +137,11 @@ let weather = {
 const searchBtn = document.querySelector('.btn');
 searchBtn.addEventListener('click', (e) => {
    e.preventDefault();
-   weather.search()
-   searched()
-   fetchEvents()
+   if (searchBtn.value.trim().length > 0) {
+     searched();
+    }
+  weather.search();
+  fetchEvents();
 })
 
 // Update the function so the user can press 'Enter' to search 
@@ -158,10 +160,14 @@ weather.fetchWeather()
  * ***************************/
 const eventBox = document.querySelector(".events")
 const categoryName = document.querySelector("#category")
-   
+  
+// add event listener to the category dropdown
+categoryName.addEventListener("change", () => {
+  fetchEvents();
+})
+
 // fetch events based on the category and city name
 function fetchEvents() {
-        console.log(searchInput.value)
         eventBox.innerHTML = ""
         type = categoryName.value
         city = searchInput.value
