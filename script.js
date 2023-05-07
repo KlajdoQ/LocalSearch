@@ -47,7 +47,6 @@ updateClock()
  *     SEARCHED BUTTON        *
  * ***************************/
 function searched() {
-
       // Get the search input element
     const search = document.querySelector(".search-input")
       // Get the history list element
