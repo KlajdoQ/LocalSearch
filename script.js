@@ -18,7 +18,6 @@ function updateClock() {
     let m = new Date().getMinutes()
     let s = new Date().getSeconds()
     let am = "AM"
-    console.log()
       // Convert the hours to 12-hour format
     if (h > 12) {
         h = h - 12
