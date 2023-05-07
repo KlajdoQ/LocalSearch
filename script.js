@@ -51,16 +51,13 @@ function searched() {
       // Get the history list element
     const historyList = document.querySelector(".history")
       // Get the searched button element
-    const searchedBtn = document.querySelector(".searchedBtn")
-
-    let clicked = false
+    const searchedBtnEl = document.querySelector(".searchedBtn")
     
       // Create a list element to display the search history
     const li = document.createElement("li")
     li.className = "search-list"
     li.textContent = search.value
     historyList.appendChild(li)
-   
       // Add a click event listener to the list element
     li.addEventListener("click", () => {
             // Set the search input value to the clicked list element text content
@@ -77,13 +74,16 @@ function searched() {
     })
 
       // Add a click event listener to the searched button so it shows the searches when clicked
-    searchedBtn.addEventListener("click", (e) => {
+    searchedBtnEl.addEventListener("click", (e) => {
         e.preventDefault()
-        clicked = !clicked
-        clicked? historyList.classList.remove('loading') : historyList.classList.add('loading')
+        if (historyList.classList.contains('loading')) {
+          historyList.classList.remove('loading');
+      } else {
+          historyList.classList.add('loading');
+      }
     })
 }
-
+//searched()
 /******************************
  *     FETCH WEATHER          *
  * ***************************/
@@ -135,11 +135,12 @@ let weather = {
 const searchBtn = document.querySelector('.btn');
 searchBtn.addEventListener('click', (e) => {
    e.preventDefault();
-   if (searchBtn.value.trim().length > 0) {
+   const searchValue = document.querySelector('.search-input').value.trim();
+   if (searchValue.length > 0) {
      searched();
-    }
-  weather.search();
-  fetchEvents();
+     weather.search(searchValue);
+     fetchEvents(searchValue);
+   }
 })
 
 // Update the function so the user can press 'Enter' to search 

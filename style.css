@@ -314,7 +314,7 @@ body {
 }
 
 .history.loading{
-    visibility: hidden;
+    display:none;
 }
 @media only screen and (max-width: 600px) and (min-width: 400px)  {
    #search-section > .logo {
